@@ -16,3 +16,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Alumni(models.Model):
+    name = models.CharField(max_length=50)
+    occupation = models.TextField()
+    date = models.DateTimeField(default=timezone.now)
+
+    def store(self):
+        self.save()
+
+    def __str__(self):
+        return self.name

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	{% for alum in people %}
+        <div class="post">
+            <div class="date">
+                <p>published: {{ alum.date }}</p>
+            </div>
+            <h2><a href="">{{ alum.name }}</a></h2>
+            <p>{{ alum.occupation|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+</body>
+</html> 
