@@ -10,5 +10,5 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def alum_list(request):
-	people = Alumni.objects
+	people = Alumni.objects.all()
 	return render(request, 'blog/alum_list.html', {'people': people})
